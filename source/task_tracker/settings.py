@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap5',
     'tracker',
     'accounts',
+    'rest_framework',
+    'api'
 
 ]
 
