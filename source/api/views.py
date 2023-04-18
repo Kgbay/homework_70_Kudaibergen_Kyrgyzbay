@@ -40,5 +40,8 @@ class UpdateView(APIView):
 
 class DeleteView(APIView):
 
-    pass
+    def delete(self, request, pk=None):
+        task = get_object_or_404(Task, pk=pk)
+        task.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
